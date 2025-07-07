@@ -24,9 +24,13 @@ namespace App\Models{
  * @property int|null $total_price
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Vehicle $vehicle
+ * @property-read \App\Models\Zone $zone
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Parking active()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Parking newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Parking newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Parking query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Parking stopped()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Parking whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Parking whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Parking whereStartTime($value)
