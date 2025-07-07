@@ -8,6 +8,7 @@ use App\Http\Resources\VehicleResource;
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 
 class VehicleController extends Controller {
 
@@ -18,7 +19,7 @@ class VehicleController extends Controller {
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request) {
+    public function store(StoreVehicleRequest $request) {
         $vehicle = Vehicle::create($request->validated());
 
         return VehicleResource::make($vehicle);
@@ -37,7 +38,7 @@ class VehicleController extends Controller {
     public function update(StoreVehicleRequest $request, Vehicle $vehicle) {
         $vehicle->update($request->validated());
 
-        return response()->json(VehicleResource::make($vehicle), Response::HTTP_OK);
+        return response()->json(VehicleResource::make($vehicle), ResponseAlias::HTTP_OK);
     }
 
     /**
