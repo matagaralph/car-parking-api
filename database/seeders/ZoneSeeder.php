@@ -13,8 +13,8 @@ class ZoneSeeder extends Seeder
      */
     public function run(): void
     {
-        Zone::create(['name' => 'Green Zone', 'price_per_hour' => 100]);
-        Zone::create(['name' => 'Yellow Zone', 'price_per_hour' => 200]);
-        Zone::create(['name' => 'Red Zone', 'price_per_hour' => 300]);
+        Zone::create(['name' => 'Kwame Mall', 'price_per_hour' => 100]);
+        Zone::create(['name' => 'Nketa Zone', 'price_per_hour' => 200]);
+        Zone::create(['name' => 'Marondera P1', 'price_per_hour' => 300]);
     }
 }
