@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 
 class ProfileController extends Controller {
     public function show(Request $request) {
-        return response()->json($request->user(), ResponseAlias::HTTP_OK);
+        return response()->json($request->user()->only(['name', 'email']), ResponseAlias::HTTP_OK);
     }
 
     public function update(Request $request) {
@@ -21,6 +21,6 @@ class ProfileController extends Controller {
 
         auth()->user()->update($validatedData);
 
-        return response()->json($validatedData, ResponseAlias::HTTP_OK);
+        return response()->json($validatedData, ResponseAlias::HTTP_ACCEPTED);
     }
 }
