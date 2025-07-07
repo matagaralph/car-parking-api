@@ -104,7 +104,7 @@ namespace App\Models{
  *
  * @property int $id
  * @property string $name
- * @property int $price_per_hr
+ * @property int $price_per_hour
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Zone newModelQuery()
@@ -113,7 +113,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Zone whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Zone whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Zone whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Zone wherePricePerHr($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Zone wherePricePerHour($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Zone whereUpdatedAt($value)
  */
 	class Zone extends \Eloquent {}

@@ -23,7 +23,7 @@ class RegisterController extends Controller {
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-        
+
 
         $device = substr($request->userAgent() ?? '', 0, 255);
 
