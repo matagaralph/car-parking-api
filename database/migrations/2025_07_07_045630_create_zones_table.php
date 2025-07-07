@@ -10,7 +10,7 @@ return new class extends Migration {
         Schema::create('zones', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('price_per_hr');
+            $table->integer('price_per_hour');
             $table->timestamps();
         });
     }
