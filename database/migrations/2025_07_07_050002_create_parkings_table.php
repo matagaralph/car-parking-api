@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->foreignId('zone_id')->constrained();
             $table->dateTime('start_time')->nullable();
             $table->dateTime('stop_time')->nullable();
-            $table->integer('total_price')->nullable()->default(0);
+            $table->integer('total_price')->nullable();
             $table->timestamps();
         });
     }
